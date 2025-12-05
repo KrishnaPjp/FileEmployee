@@ -117,7 +117,7 @@ public class EmpController {
         } else if (ext.equalsIgnoreCase("pdf")) {
             String txt = Arrays.toString(dPdf(file));
             System.out.println(txt);
-
+            System.out.println("Hello world");
         }
 
         return "redirect:/show";
