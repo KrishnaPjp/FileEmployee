@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Employee</h2>
+
+    <form th:action="@{/update}" th:object="${emp}" method="post">
+
+        <div class="form-group">
+            <label>ID</label>
+            <input type="text" th:field="*{id}" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" th:field="*{name}" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" th:field="*{age}" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label>Salary</label>
+            <input type="number" th:field="*{salary}" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href="/show" class="btn btn-secondary ml-2">Back</a>
+
+    </form>
+</div>
+
+</body>
+</html>
